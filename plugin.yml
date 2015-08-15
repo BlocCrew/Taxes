@@ -1,0 +1,22 @@
+name: BlocTaxes
+version: 1.1.0
+description: Tax the citizens
+author: Bloc Crew
+website: http://bloccrew.com
+main: com.bloccrew.plugin.taxes.Taxes
+depend: [Vault]
+
+commands:
+  tax:
+    description: tax all the taxes
+    usage: /tax
+    permission: tax.info
+    permission-message: You don't have permission
+    
+permissions:
+  tax.info:
+    description: Shows tax info
+    default: true
+  tax.collect:
+    description: Ability to collect taxes
+    default: op

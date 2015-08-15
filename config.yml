@@ -1,0 +1,19 @@
+#Who gets the tax money?
+recipient: Government
+
+#How often taxes are collected in days
+interval: 7
+
+#define the rate at which a player is taxed based on how much money they have
+taxes:
+  lowtax:
+    rate: 0.05
+    bal: 250
+  midtax:
+    rate: 0.10
+    bal: 500
+  hightax:
+    rate: 0.20
+
+#NO TOUCHY PLS (unless you want to break the plugin, k?)
+nextcollection: 2015-06-13
