@@ -1,5 +1,5 @@
 name: BlocTaxes
-version: 1.1.0
+version: 1.1.1
 description: Tax the citizens
 author: Bloc Crew
 website: http://bloccrew.com
@@ -17,6 +17,9 @@ permissions:
   tax.info:
     description: Shows tax info
     default: true
+  tax.info.other:
+    description: Shows tax info of other players
+    default: op
   tax.collect:
     description: Ability to collect taxes
     default: op

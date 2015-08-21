@@ -185,10 +185,21 @@ public class Taxes extends JavaPlugin{
 						sender.sendMessage(econ.format(collectTaxes()) + " has been collected in taxes.");
 						return true;
 					}
+				}else{
+					if(sender.hasPermission("tax.info.other")){
+						for(OfflinePlayer p : Bukkit.getServer().getOfflinePlayers()){
+							if(p.getName().equalsIgnoreCase(args[0])){
+								sender.sendMessage(ChatColor.UNDERLINE + p.getName() + ChatColor.RESET + 
+										"\nBalance: " + econ.format(econ.getBalance(p)) +
+										"\nTax: " + econ.format(calcTax(p)));
+								return true;
+							}
+						}
+					}
 				}
 			}else{
-				if(sender.hasPermission("tax.info")){
-					if(sender instanceof Player){
+				if(sender instanceof Player){
+					if(sender.hasPermission("tax.info")){
 						OfflinePlayer p = ((Player) sender).getPlayer();
 						sender.sendMessage(ChatColor.UNDERLINE + sender.getName() + ChatColor.RESET + 
 								"\nBalance: " + econ.format(econ.getBalance(p)) +
